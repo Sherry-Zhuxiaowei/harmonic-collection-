@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charest="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>second entry</title>
+    <link rel="stylesheet" href="second entry style.css">
+</head>
+
+<body>
+<div class="sound">
+    <!--播放器-->
+    <audio id="myAudio">
+        <source src="denglong.MP3" type="audio/mpeg">
+    </audio>
+<div class="player">
+    <div class="info active" id="info">
+        <div class="progress-bar">
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="control" id="control">
+        <div class="alarm"></div>
+        <div class="buts">
+            <div class="prev"></div>
+            <div id="play" class="play"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+    <script>
+        let playBut=document.getElementById("play");
+        let myAudio=document.getElementById("myAudio");
+        let controlDom=document.getElementById('control');
+        let infoBar=document.getElementById('info');
+        playBut.addEventListener("click" ,playF);
+        function playF(){
+            let flag=Array.from(controlDom.classList).some(function(item){
+                return item=="active";
+            });
+            if(flag){
+                controlDom.classList.remove('active');
+                infoBar.classList.remove('active');
+                myAudio.pause();
+            }else{
+                controlDom.classList.add('active');
+                infoBar.classList.add('active');
+                myAudio.play();
+            }
+
+        }
+    </script>    
+
+</div>
+</div>
+<br>
+<h3 style="font-family:Arial, Helvetica, sans-serif;"><strong>
+父亲说她的皮囊美
+<p><em>Father said her appearance is beautiful</em></p>
+<br>
+待到来日定好说媒
+<p><em>She can be easily married off in the future</em></p>
+<br>
+寻找一个门当户对来配
+<p><em>Looking for a match with similar social and economic backgrounds</em></p>
+<br>
+<h1>忠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;良&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贤&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;惠</h1>
+<br>
+时刻秉承家规 牢记祖辈教诲
+<p><em>Always adhere to family rules and remember the teachings of our ancestors</em></p>
+<br>
+<h1>无&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;字&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碑</h1>
+<br>
+没有人在乎过 她姓甚名谁
+<p><em>No one has ever cared about her surname and given name</em></p>
+<br>
+</strong></h3>
+
+
+
+
+
+
+</body>
+</html>
