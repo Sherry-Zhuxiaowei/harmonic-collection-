@@ -1,6 +1,11 @@
 body {
     background-color: #7e2b1c;
     color: #090c13;
+    margin: 0 auto;
+    
+}
+img{
+    width: 50vw;
 }
 h1,h2{
     text-align: center;
