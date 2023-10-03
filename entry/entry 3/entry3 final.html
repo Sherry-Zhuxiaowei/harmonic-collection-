@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry3</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+        <div>
+        <p class="text">
+            你不是天生喜欢粉色
+        </p>
+        <p class="text">
+            You are not naturally inclined to love pink.
+        </p>
+        <p class="text">
+            不是天生喜欢洋娃娃
+        </p>
+        <p class="text">
+            You are not naturally inclined to love dolls.
+        </p>
+        <p class="text">
+            不是天生乖巧文静
+        </p>
+        <p class="text">
+            You are not naturally quiet and obedient.
+        </p>
+        <p class="text">
+            不用在意“女孩子该有女孩子的样子”这种话
+        </p> 
+        <p class="text">
+            Don't care about the stereotype that 'girls should act like girls.'
+        </p> 
+        <p class="text">
+            我们没有必要因为外界的性别塑造去追求顺从体贴
+        </p> 
+        <p class="text">
+            We don't need to conform to external gender expectations,
+        </p> 
+        <p class="text">
+            去要求自己不争不抢
+        </p> 
+        <p class="text">
+            to be submissive and docile.
+        </p> 
+        <p class="text">
+            别被刻板印象束缚
+        </p>
+        <p class="text">
+            Don't let yourself be confined by stereotypes.
+        </p>
+        <p class="text">
+            不管成为什么样子
+        </p>
+        <p class="text">
+            No matter what,
+        </p>
+        <p class="text">
+            你都是最棒的女孩子
+        </p>
+        <p class="text">
+            you are an amazing girl.
+        </p>
+    </div>
+    </section>
+</body>
+<script>
+    const text=document.querySelectorAll('.text');
+    text.forEach((element)=>{
+        element.innerHTML=element.textContent.replace(/\S/g,"<span>$&</span>")
+
+    });
+    
+    let goBackTime=2;
+
+    const letters = document.querySelectorAll("span");
+    for(let i=0;i<letters.length;i++){
+        letters[i].addEventListener('mouseover',function(){
+            letters[i].classList.add('active')
+            letters[i].classList.add('active'+i)
+            
+            setTimeout(()=>{
+                let letter = document.querySelector('.active'+i)
+                letter.classList.remove("active");
+                letter.classList.add("show");
+            },goBackTime*1000)
+
+            
+        })
+    }
+</script>
+</html>
