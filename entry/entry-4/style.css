@@ -1,0 +1,60 @@
+@font-face {
+    font-family: YoungSerif;
+    src: url("YoungSerif-Regular.ttf")
+}
+@font-face {
+    font-family: Lobster;
+    src: url("Lobster-Regular.ttf");
+}
+
+body{
+    background-color: rgb(8, 83, 78);
+    background-size:cover;
+    text-align: center;
+    font-size: small;
+}
+
+
+.headline{
+    text-align: center;
+    margin-left: 25%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(102, 18, 18);
+    width:fit-content;
+}
+
+.change{
+    font-size:x-large;
+    font-family: Lobster;
+
+
+}
+.text{
+    color: #4a0e06;
+    font-family: YoungSerif;
+    line-height: 260%;
+    font-weight: 400;
+    font-kerning: auto;
+
+
+}
+
+
+
+.text:hover .original{
+    visibility: hidden;
+}
+
+.text .transformed{
+    color: rgba(10, 123, 116, 0);
+
+    
+
+}
+.text:hover .transformed{
+    position:absolute;
+    top: 100px;
+    margin-left: 25%;
+    color: #690d01;
+    
+}
