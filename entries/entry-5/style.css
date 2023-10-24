@@ -1,14 +1,8 @@
 body{
     width: 1512px;
     height: 1481px;
-    background: linear-gradient(rgba(171, 255, 235, 0.97) 0%, rgba(130, 165, 255, 0.38) 47.4%, rgba(18, 229, 191, 0.86) 100%);
     background-image: url("MacBook\ Pro\ 14_\ -\ 1.png");
     display: flex;
-    flex-direction: column;
-    line-height: 1.5;
-    min-height: 100vh;
-    overflow-y: scroll;
-    position: relative; 
 }
 .background {
     background-color: black 50%;

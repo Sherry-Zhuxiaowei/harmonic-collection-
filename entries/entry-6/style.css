@@ -1,0 +1,116 @@
+
+html{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-image: url(background.png);
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+
+.spring{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+h2{
+    color:#164A3E;
+    font-size: 90px;
+    margin-left: 400px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+}
+
+.text {
+    color:#164A3E; 
+    font-size: 56px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+
+
+/* @media (min-width:850px) {
+  .header h1 {
+    font-size: 120px;
+  }
+} */
+
+.S1{
+    height: 500px;
+    float: left;
+    shape-margin: 30px;
+    shape-outside: url(spring1.png);
+    clear: both;
+}
+
+.S3{
+    height: 500px;
+    float: right;
+    shape-margin: 30px;
+    shape-outside: url(spring3.png);
+    clear: both;
+
+
+}
+
+.S2{
+    height: 500px;
+    float: left;
+    shape-margin: 30px;
+    shape-outside: url(spring2.png);
+}
+
+.S4{
+    height: 500px;
+    float: right;
+    shape-margin: 30px;
+    shape-outside: url(spring4.png);
+    clear: both;
+}
+
+.text {
+    grid-area: text;
+}
+
+h2{
+    font-family: "bely-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .text {
+      color: #03384c;
+      font-size: 70px;
+      margin-bottom: 80px;
+    }
+    .S1,.S2,.S3,.S4{
+        width: 100%;
+    }
+    .spring{
+        width: 100%;
+    }
+    h2{
+        color: #03384c;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
