@@ -38,7 +38,7 @@ h2{
     font-size: 56px;
     text-align: left;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     position: relative;
 }
 
@@ -55,7 +55,8 @@ h2{
     height: 500px;
     float: left;
     shape-margin: 30px;
-    shape-outside: url(spring1.png);
+    clip-path: ellipse(50% 40% at 50% 50%);
+    shape-outside: ellipse(50% 40% at 50% 50%);
     clear: both;
 }
 
@@ -63,7 +64,8 @@ h2{
     height: 500px;
     float: right;
     shape-margin: 30px;
-    shape-outside: url(spring3.png);
+    clip-path: ellipse(47% 40% at 50% 50%);
+    shape-outside: ellipse(47% 40% at 50% 50%);
     clear: both;
 
 
@@ -73,14 +75,16 @@ h2{
     height: 500px;
     float: left;
     shape-margin: 30px;
-    shape-outside: url(spring2.png);
+    clip-path: ellipse(50% 40% at 50% 50%);
+    shape-outside: ellipse(50% 40% at 50% 50%);
 }
 
 .S4{
     height: 500px;
     float: right;
     shape-margin: 30px;
-    shape-outside: url(spring4.png);
+    clip-path: ellipse(45% 50% at 50% 50%);
+    shape-outside: ellipse(45% 50% at 50% 50%);
     clear: both;
 }
 
