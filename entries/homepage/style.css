@@ -1,0 +1,81 @@
+body{
+    background-image: url("background.png");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contentbox{
+    width: 350px;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    background-image: url("decompose.JPG");
+}
+
+.contentbox h1{
+    color: #FFE;
+    margin: 20px;
+}
+
+.contentbox:hover{
+    scale: 0.97;
+    box-shadow: none;
+}
+
+nav{
+    position: relative;
+    width: 1500px;
+    height: 50px;
+    background-color: #FFDADA;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    font-family: "hwt-gothic-round", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+nav a{
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+nav a:nth-child(1) {
+    width: 300px;
+}
+nav a:nth-child(2) {
+    width: 400px;
+}
+nav a:nth-child(3) {
+    width: 460px;
+}
+nav a:nth-child(4) {
+    width: 260px;
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FF016C;
+    z-index: 9;
+}
