@@ -1,0 +1,261 @@
+@font-face {
+    font-family: Rubirocks;
+    src: url("RubikMoonrocks-Regular.ttf")
+}
+@font-face {
+    font-family: Rubicrobe;
+    src: url("RubikMicrobe-Regular.ttf")
+}
+@font-face {
+    font-family: Righteous;
+    src: url("Righteous-Regular.ttf")
+}
+
+
+
+
+body{
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+
+    transform-style: inherit;
+    height: 100vh;
+}
+
+header h1 {
+    background-color: white;
+    color: black;
+    font-family: Rubirocks;
+    padding: 0.1em 0.5em;
+    font-size: 7em;
+}
+
+header::before {
+    content: "";
+    display: block;
+    background-image: url(fullpicture.jpg);
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+
+/* navigation bar */
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.text{
+    z-index: 1;
+}
+.circle{
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+
+}
+
+
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 200px;
+    font-family: "Righteous";
+    font-weight: 400;
+    font-style: normal;
+} 
+
+nav a{
+    position: relative;
+    /* display: block;
+    float: left;
+    
+    line-height: 50px;
+    width: 100px;
+    height: 50px; */
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+}
+
+
+article {
+    width: 90vw;
+    max-width: 960px;
+    padding: 6em 0;
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 0.075em;
+    text-indent: 2em;
+    line-height: 1.8em;
+}
+.explain{
+    font-family: "Righteous";
+}
+h2{
+    font-family: "Rubicrobe";
+}
+@media screen and (max-width: 1024px) {
+    header h1{
+        font-size: 2.5em;
+        padding: 1em 1.5em;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    header h1{
+        font-size: 1.5em;
+        padding: 1em 1em;
+    }  
+}
+
+/* animation */
+
+header span{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+header span.active{
+    animation: smoke 2s linear forwards;
+    transform-origin: bottom;
+}
+
+.show{
+    animation: show-letter .5s linear forwards;
+}
+
+@keyframes show-letter{
+    0%{
+        opacity: 0;
+        transform: rotate(0deg) scale(1);
+    }
+    50%{
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1.1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes smoke{
+    0%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+    100%{
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+
+/* chat gpt wirte but still not working */
+
+header span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+header span.active {
+    animation: smoke 2s linear forwards;
+    transform-origin: bottom;
+}
+
+.header span.show {
+    animation: show-letter 0.5s linear forwards;
+}
+
+@keyframes show-letter {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}

@@ -80,12 +80,17 @@ nav .animation{
     justify-content: center;
     align-items: center;
     flex-wrap: unset;
+    margin-top: 300px;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
     /* flex-wrap: wrap; */
-    max-width: 1100px;
+    /* max-width: 1100px; */
 }
 .container .card{
     position: relative;
-    width: 700px;
+    /* width: 700px; */
+    flex-grow: 1;
     height: 1000px;
     margin: 10px;
     overflow: hidden;
