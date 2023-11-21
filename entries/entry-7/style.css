@@ -30,6 +30,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     height: 100vh;
+    width: 100%;
     perspective: 1px;
     transform-style: preserve-3d;
 }
@@ -39,10 +40,12 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
+    /* height: 70vh; */
+    width: 100vw;
+    aspect-ratio: 3000/1233;
+    margin-top: 140px;
 
     transform-style: inherit;
-    height: 100vh;
 }
 
 header h1 {
@@ -51,13 +54,16 @@ header h1 {
     font-family: Rubirocks;
     padding: 0.1em 0.5em;
     font-size: 7em;
+    
 }
+
 
 header::before {
     content: "";
     display: block;
     background-image: url(fullpicture.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -73,6 +79,7 @@ header::before {
 
 .container{
     width: 100%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -128,7 +135,19 @@ nav a{
     z-index: 10;
 }
 
-
+.An{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+.An img{
+    flex-grow: 1;
+    margin-right: 32px;
+}
+.An .text1{
+    flex-grow: 1;
+}
 
 main {
     display: flex;

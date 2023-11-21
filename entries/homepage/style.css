@@ -6,12 +6,21 @@
     font-family: modak;
     src: url("Modak-Regular.ttf")
 }
+@font-face {
+    font-family: paytone;
+    src: url("PaytoneOne-Regular.ttf")
+}
 
 body{
     background-image: url("background.png");
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 h1{
@@ -31,10 +40,13 @@ h1{
     display: flex;
     justify-content: center;
     color: #FFE;
-    font-size: 64px;
+    font-size: 54px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
+    font-family: "paytone";
+    margin-bottom: 30px;
+    margin-top: 60px;
 
 }
 .container{
@@ -64,18 +76,35 @@ h1{
     z-index: 0;
 
 }
+.wholebox a{
+    margin: 0 auto;
+    width: 350px;
+    height: 200px;
+    display: contents;
+}
 
-
+.contain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 4列 */
+    /* grid-template-rows: repeat(3, 100px); 3行--每行高度为100px */
+    max-width: 2000px;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 20px; /* 列之间的水平间距*/
+    grid-row-gap: 200px;/* 间距 */
+}
 
 .contentbox{
     width: 350px;
     height: 300px;
-    margin: 20px;
-
+    /* margin: 20px; */
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     box-shadow: 5px 5px 10px 0px lightgray;
     border-radius: 10px;
+    margin: 0 auto;
 
 }
 
@@ -107,9 +136,40 @@ h1{
     background-repeat: no-repeat;
 
 }
+.mask {
+    background-image: url("mask.JPG");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
+.poster {
+    background-image: url("poster.JPG");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
+.self {
+    background-image: url("SELF\ EXPLORATION.JPG");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
+.ocean {
+    background-image: url("ocean.JPG");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
 
 .wholebox h2{
     color: #FFE;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     text-align: center;
 }
 
@@ -126,7 +186,8 @@ nav{
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 200px;
+    /* gap: 200px; */
+   
     font-family: "modak";
     font-weight: 400;
     font-style: normal;
@@ -140,6 +201,8 @@ nav a{
     line-height: 50px;
     width: 100px;
     height: 50px; */
+    margin-left: 100px;
+    margin-right: 100px;
     font-size: 40px;
     text-transform: uppercase;
     text-decoration: none;
