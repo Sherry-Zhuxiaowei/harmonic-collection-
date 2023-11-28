@@ -149,6 +149,36 @@ nav a{
     flex-grow: 1;
 }
 
+.Ag{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+.Ag img{
+    flex-grow: 1;
+    margin-right: 32px;
+    margin-top: 32px;
+}
+.Ag .text1{
+    flex-grow: 1;
+}
+
+.Ex{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+.Ex img{
+    flex-grow: 1;
+    margin-right: 32px;
+    margin-top: 32px;
+}
+.Ex .text1{
+    flex-grow: 1;
+}
+
 main {
     display: flex;
     justify-content: center;
