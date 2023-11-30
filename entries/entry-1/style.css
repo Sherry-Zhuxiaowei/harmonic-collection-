@@ -1,0 +1,101 @@
+@font-face {
+    font-family: Lancelot;
+    src: url("Lancelot-Regular.ttf")
+}
+body{
+    background-color: #8C2727;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+h1{
+    color: #FFC909;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "plaster";
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+/* navigation bar */
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "Lancelot";
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+} 
+
+nav a{
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.text{
+    z-index: 1;
+    color: #D7A015;
+}
+.circle{
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    background-color: #C20E0E;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+/* pic and text */
+.Alter{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: justify;
+}
+.Alter img{
+    width: 1320px;
+    height: 940px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-right: 32px;
+    margin-left: 50px;
+}
+.Alter .text1{
+    flex-grow: 1;
+    font-size: 50px;
+    margin-right: 50px;
+}
