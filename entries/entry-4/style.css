@@ -1,21 +1,38 @@
 body{
-    background-color: #1F1F1F;
+    background-image: url("background.jpg ");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
 @font-face {
-    font-family: Monoton;
-    src: url("Monoton-Regular.ttf")
+    font-family: Sansita;
+    src: url("Sansita-BoldItalic.ttf")
 }
 @font-face {
-    font-family: Nosifer;
-    src: url("Nosifer-Regular.ttf")
+    font-family: Shrikhand;
+    src: url("Shrikhand-Regular.ttf")
 }
 h1{
-    color: #FFFFFF;
+    color: #213866;
     font-size: 128px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    font-family: "Nosifer";
+    font-family: "Shrikhand";
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+p{
+    color: #213866;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Shrikhand";
     font-weight: 400;
     font-style: normal;
     display: flex;
@@ -29,7 +46,7 @@ nav{
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    font-family: "Monoton";
+    font-family: "Sansita";
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -62,26 +79,31 @@ nav a{
 }
 .text{
     z-index: 1;
-    color: #FFFFFF;
+    color: #009ED0;
     font-size: 35px;
 }
 .circle{
     width: 118px;
     height: 118px;
     border-radius: 100%;
-    background-color: #787878;
+    background-color: #EEFBFF;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
 }
-.school img{
-    width: 1573px;
-    height: 1209px;
-    flex-shrink: 0;
-    margin-top: 50px;
+
+.images-container {
     display: flex;
     justify-content: center;
-    /* text-align: center; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.images-container img {
+    margin-top: 70px;
+    margin: 0 30px; /* 20px 的间距，分别在左右两侧 */
+    max-width: 100%; /* 图片宽度最大为容器宽度 */
+    height: auto; /* 保持宽高比例 */
 }
