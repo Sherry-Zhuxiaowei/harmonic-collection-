@@ -6,7 +6,6 @@ body{
     background-color: #8C2727;
     background-size: cover; 
     background-attachment: fixed;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     position: relative;
@@ -65,6 +64,7 @@ nav a{
 .text{
     z-index: 1;
     color: #D7A015;
+    font-size: 35px;
 }
 .circle{
     width: 118px;
@@ -78,7 +78,7 @@ nav a{
     z-index: 0;
 }
 /* pic and text */
-.Alter{
+/* .Alter{
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -94,8 +94,65 @@ nav a{
     margin-right: 32px;
     margin-left: 50px;
 }
+.Alter .yellow{
+    width: 400px;
+    height: 940px;
+
+}
 .Alter .text1{
     flex-grow: 1;
     font-size: 50px;
     margin-right: 50px;
 }
+/* 黄符前后变化 */
+/* .yellow:hover .text1 {
+    opacity: 0; 
+}
+
+.yellow::after .text1 {
+    opacity: 1; 
+    pointer-events: none;
+    transition: opacity 0.3s ease 0.5s; 
+} */ 
+.Alter {
+    display: flex;
+    align-items: center;
+}
+
+.Alter .alterpic img {
+    width: 1320px;
+    height: 940px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-right: 32px;
+    margin-left: 50px;
+}
+
+.Alter .yellow img {
+    width: 500px;
+    height: 1040px;
+    position: relative;
+    margin-left: 70px;
+
+}
+
+.Alter .text1 {
+    flex-grow: 1;
+    font-size: 50px;
+    margin-right: 50px;
+    transition: opacity 0.3s ease;
+}
+
+/* 鼠标悬停时触发效果 */
+.Alter:hover .text1 {
+    opacity: 0; 
+}
+
+.Alter:hover .yellow::after {
+    content: "";
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.3s ease 0.5s; 
+}
+

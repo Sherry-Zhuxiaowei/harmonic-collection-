@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2A284C;
+}
+h1{
+    color: #FFD600;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Sarina";
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+@font-face {
+    font-family: Nova;
+    src: url("NovaScript-Regular.ttf")
+}
+@font-face {
+    font-family: Sarina;
+    src: url("Sarina-Regular.ttf")
+}
+/* navigation bar */
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "Nova";
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+} 
+
+nav a{
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.text{
+    z-index: 1;
+    color: #BDC5FF;
+    font-size: 35px;
+}
+.circle{
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    background-color: #6100FF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+/* text */
+.transparent-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1226px;
+    height: 910px;
+    /* background-color: rgba(255, 255, 255, 0.5); /* 使用 RGBA 表示透明度，这里是半透明，可以根据需要调整透明度 */
+    /* border: 2px solid #333;  */
+}
+
+.transparent-box p {
+    text-align: left; /* 让文字居中对齐 */
+    font-size: 45px; /* 根据需要调整文字大小 */
+    color: #FFD600; /* 文字颜色，可选 */
+    
+}
+
+.poster img{
+    width: 1192px;
+    height: 1854px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

@@ -164,6 +164,20 @@ h1{
     background-repeat: no-repeat;
 
 }
+.moment {
+    background-image: url("moment.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
+.orca {
+    background-image: url("orca.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
 
 .wholebox h2{
     color: #FFE;
