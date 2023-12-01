@@ -83,8 +83,10 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1226px;
+    max-width: 1226px;
+    width: 80%;
     height: 910px;
+    margin: 0 auto;
     /* background-color: rgba(255, 255, 255, 0.5); /* 使用 RGBA 表示透明度，这里是半透明，可以根据需要调整透明度 */
     /* border: 2px solid #333;  */
 }
@@ -96,12 +98,17 @@ nav a{
     
 }
 
-.poster img{
-    width: 1192px;
+.poster{
+    max-width: 1192px;
+    width: 80%;
     height: 1854px;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     
+}
+.poster img{
+    width: 100%;
 }

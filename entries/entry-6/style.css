@@ -29,13 +29,14 @@ nav{
     text-align: center;
     font-weight: 300;
     font-style: normal;
+    margin-top: 30px;
 } 
 
 nav a{
     position: relative;
     margin-left: 100px;
     margin-right: 100px;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -56,6 +57,7 @@ nav a{
 }
 .text{
     z-index: 1;
+    color:#164A3E;
 }
 .circle{
     width: 118px;
@@ -88,7 +90,7 @@ h2{
 
 }
 
-.text {
+.text1 {
     color:#164A3E; 
     font-size: 56px;
     text-align: left;
