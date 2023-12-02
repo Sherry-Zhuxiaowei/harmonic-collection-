@@ -1,0 +1,97 @@
+@font-face {
+    font-family: plaster;
+    src: url("Plaster-Regular.ttf")
+}
+@font-face {
+    font-family: modak;
+    src: url("Modak-Regular.ttf")
+}
+body{
+    background-image: url("background.png");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+h1{
+    color: #FFFFFF;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "plaster";
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+/* navigation bar */
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "modak";
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+} 
+
+nav a{
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.text{
+    z-index: 1;
+    color: #FFFFFF;
+    font-size: 35px;
+}
+.circle{
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    background-color: #FF016C;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.number{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 50px;
+    color: #FFFFFF;
+}
