@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F4FFFE;
+}
+h1{
+    color: #006B8D;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "lemon";
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+@font-face {
+    font-family: rowdies;
+    src: url("Rowdies-Regular.ttf")
+}
+@font-face {
+    font-family: lemon;
+    src: url("Lemon-Regular.ttf")
+}
+/* navigation bar */
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "rowdies";
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+} 
+
+nav a{
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.artwork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.text{
+    z-index: 1;
+    color: #1F86A7;
+    font-size: 35px;
+}
+.circle{
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    background-color: #FFFDD8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.video{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
