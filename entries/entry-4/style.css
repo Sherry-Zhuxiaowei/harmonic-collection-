@@ -102,8 +102,13 @@ nav a{
 }
 
 .images-container img {
-    margin-top: 70px;
-    margin: 0 30px; /* 20px 的间距，分别在左右两侧 */
-    max-width: 100%; /* 图片宽度最大为容器宽度 */
+    margin-top: 5%;
+    margin: 0 15px; /* 20px 的间距，分别在左右两侧 */
+    width: 80%; /* 图片宽度最大为容器宽度 */
     height: auto; /* 保持宽高比例 */
 }
+/* @media only screen and (min-width: 414px) {
+    .images-container img {
+        width: 750px;
+    }
+} */

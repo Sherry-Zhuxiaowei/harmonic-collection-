@@ -53,8 +53,8 @@ img.dress{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 750px;
-    height: 1600px;
+    max-width: 750px;
+    max-height: 1600px;
     object-fit: cover;
     opacity: 1;
     transition: opacity 0.3s ease; 
@@ -95,12 +95,13 @@ img.dress{
 
 
 img.pic1{
-    max-width: 50%;
-    max-height: 60%;
+    max-width: 65%;
+    max-height: 50%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 4;
+    /* margin-left: 45px; */
 }
 
 img.pic2{
