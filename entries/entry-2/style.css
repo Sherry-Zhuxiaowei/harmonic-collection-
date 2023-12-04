@@ -79,6 +79,21 @@ nav a{
     z-index: 0;
 }
 /* text */
+.header-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3; /* 将图像放置在最底层，以便后面的内容能够显示在它上面 */
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .transparent-box {
     display: flex;
     justify-content: center;
