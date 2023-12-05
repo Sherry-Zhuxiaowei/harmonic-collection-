@@ -22,9 +22,10 @@ body{
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
+    flex-direction: column;
 }
 h1{
-    position: absolute;
+    position: relative;
     top: 50px;
     color: #ffffff;
     font-family: "plaster";
@@ -47,6 +48,7 @@ nav{
     text-align: center;
     font-weight: 300;
     font-style: normal;
+
 } 
 
 nav a{
@@ -65,6 +67,7 @@ nav a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 60px;
 }
 .artwork{
     display: flex;
@@ -100,6 +103,10 @@ nav a{
     align-items: stretch;
     align-content: stretch;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* 4列 */
+    /* grid-template-rows: repeat(3, 100px); 3行--每行高度为100px */
+    max-width: 4000px;
     /* flex-wrap: wrap; */
     /* max-width: 1100px; */
 }

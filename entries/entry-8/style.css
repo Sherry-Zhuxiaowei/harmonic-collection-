@@ -1,6 +1,6 @@
 body{
     background: linear-gradient(180deg, #A5FAFF 0%, #003C5E 100%);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 @font-face {
     font-family: Luckiestguy;
@@ -99,15 +99,17 @@ nav a{
 
 /* 定义外层容器样式 */
 .shell {
-    position: relative;
+    /* position: relative; */
     width: 60vw;
     height: 40vw;
-    max-width: 380px;
-    max-height: 250px;
-    margin: 0;
+    max-width: 1080px;
+    max-height: 950px;
+    margin: 0 auto;
     color: white;
     perspective: 1000px;
     transform-origin: center;
+    margin-bottom: 700px;
+    margin-top: 50px;
 }
 
 /* 定义内容容器样式 */
@@ -115,7 +117,8 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: static;
+    /* position: absolute; */
     width: 100%;
     height: 100%;
     transform-origin: center;
@@ -129,8 +132,8 @@ nav a{
     position: absolute;
     width: 60vw;
     height: 40vw;
-    max-width: 380px;
-    max-height: 250px;
+    max-width: 1080px;
+    max-height: 950px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     border-radius: 6px;
     background-size: cover;
