@@ -1,0 +1,423 @@
+@font-face {
+    font-family: Rubirocks;
+    src: url("RubikMoonrocks-Regular.ttf")
+}
+
+@font-face {
+    font-family: Rubicrobe;
+    src: url("RubikMicrobe-Regular.ttf")
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url("Righteous-Regular.ttf")
+}
+
+@font-face {
+    font-family: paytone;
+    src: url("PaytoneOne-Regular.ttf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    flex-direction: column;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    width: 100%;
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* height: 70vh; */
+    width: 100vw;
+    aspect-ratio: 3000/1233;
+    margin-top: 140px;
+
+    transform-style: inherit;
+}
+
+/* 头部标题  */
+header h1 {
+    background-color: white;
+    color: black;
+    font-family: Rubirocks;
+    padding: 0.1em 0.5em;
+    font-size: 7em;
+    z-index: 1;
+}
+
+/* 头部背景图 */
+.header_img {
+    width: inherit;
+    height: inherit;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* navigation bar */
+.navbar,
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    right: 50px;
+    top: 25px;
+    padding: 20px;
+    background-color: #FF016C;
+    border-radius: 60px;
+    z-index: 100;
+}
+
+.navbar input {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.navbar span {
+    position: absolute;
+    left: 35px;
+    width: 40px;
+    height: 4px;
+    top: calc(50% - 10px);
+    border-radius: 15px;
+    background-color: aliceblue;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
+}
+
+.navbar span:nth-child(2) {
+    top: calc(50% + 6px);
+}
+
+.navbar ul {
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0px 15px;
+}
+
+.navbar ul li a {
+    font-family: paytone;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    color: aqua;
+}
+
+.navbar ul li a:hover {
+    color: #FFE;
+}
+
+.navbar input:checked~ul {
+    width: 350px;
+}
+
+/* this is a part of animation that chat GPT did */
+.navbar input:checked~span:nth-child(2) {
+    top: calc(50% - 2px);
+    transform: rotate(-45deg);
+    background-color: antiquewhite;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+
+.navbar input:checked~span:nth-child(3) {
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
+    background-color: antiquewhite;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+
+/* 主内容 */
+.content {
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 0.075em;
+    /* text-indent: 2em; */
+    line-height: 1.8em;
+    margin-top: 60px;
+}
+
+/* 每个盒子限制宽度 */
+.box {
+    /* 页面五分之二的宽度 */
+    width: calc((100vw / 5) * 2);
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+/* 盒子下的图片 */
+.box img {
+    width: 58%;
+}
+
+/* 文本 */
+.box .text1 {
+    text-indent: 2em;
+}
+
+/* 正文字体 */
+.box .text1 p {
+    font-size: 14px;
+}
+
+.explain {
+    font-family: "Righteous";
+}
+
+h2 {
+    font-family: "Rubicrobe";
+}
+
+/* animation */
+
+header span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+header span.active {
+    animation: smoke 2s linear forwards;
+    transform-origin: bottom;
+}
+
+.show {
+    animation: show-letter .5s linear forwards;
+}
+
+@keyframes show-letter {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+
+@keyframes show-letter {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5em;
+        padding: 1em 1.5em;
+    }
+
+    /* navbar */
+    .navbar {
+        right: 30px;
+        top: 40px;
+        padding: 20px;
+    }
+
+    .navbar input {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        top: 50%;
+        left: 50%;
+        border-radius: 15px;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+    .navbar input:checked~ul {
+        width: 250px;
+    }
+
+    /* this is a part of animation that chat GPT did */
+    .navbar input:checked~span:nth-child(2) {
+        left: 15px;
+    }
+
+    .navbar input:checked~span:nth-child(3) {
+        left: 15px;
+    }
+
+    /* 主内容 */
+    .content {
+        color: black;
+        font-size: 18px;
+        text-align: justify;
+        letter-spacing: 0.075em;
+        /* text-indent: 2em; */
+        line-height: 1.8em;
+        margin-top: 60px;
+    }
+
+    /* 每个盒子限制宽度 */
+    .box {
+        width: calc((100vw / 5) * 4);
+    }
+
+    .box img {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* 调整头部 */
+    header {
+        margin-top: 80px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        padding: 1em 1em;
+    }
+
+    /* navbar */
+    .navbar {
+        right: 15px;
+        top: 20px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .navbar input {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar span {
+        width: 30px;
+        height: 3px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .navbar input:checked~ul {
+        width: 200px;
+    }
+
+    /* 主内容 */
+    .content {
+        text-align: justify;
+        letter-spacing: 0.01em;
+        line-height: 1.2em;
+        margin-top: 50px;
+    }
+
+    /* 每个盒子限制宽度 */
+    .box {
+        width: calc((100vw / 5) * 4.2);
+        /* 允许换行 */
+        flex-wrap: wrap;
+    }
+    /* 调整图片大小并居中 */
+    .box img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    /* 调整字体 */
+    .box .text1 {
+        text-indent: 0;
+    }
+    .box .text1 h2 {
+        /* 标题居中 */
+        text-align: center;
+        line-height: 1.8em;
+    }
+    .box .text1 p {
+        text-indent: 2em;
+    }
+}
