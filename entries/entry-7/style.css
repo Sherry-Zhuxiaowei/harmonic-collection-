@@ -2,10 +2,12 @@
     font-family: Rubirocks;
     src: url("RubikMoonrocks-Regular.ttf")
 }
+
 @font-face {
     font-family: Rubicrobe;
     src: url("RubikMicrobe-Regular.ttf")
 }
+
 @font-face {
     font-family: Righteous;
     src: url("Righteous-Regular.ttf")
@@ -16,14 +18,14 @@
     src: url("PaytoneOne-Regular.ttf")
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-body{
+body {
     flex-direction: column;
 }
 
@@ -53,20 +55,21 @@ header {
     transform-style: inherit;
 }
 
+/* 头部标题  */
 header h1 {
     background-color: white;
     color: black;
     font-family: Rubirocks;
     padding: 0.1em 0.5em;
     font-size: 7em;
-    
+    z-index: 1;
 }
 
-
-header::before {
-    content: "";
+/* 头部背景图 */
+.header_img {
+    width: inherit;
+    height: inherit;
     display: block;
-    background-image: url(fullpicture.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -74,33 +77,35 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
-    transform: translateZ(-1px) scale(2);
 }
 
 
 /* navigation bar */
-body, .navbar, .navbar ul{
+.navbar,
+.navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
-.navbar{
+
+.navbar {
     position: fixed;
     right: 50px;
-    top: 50px;
+    top: 25px;
     padding: 20px;
     background-color: #FF016C;
     border-radius: 60px;
+    z-index: 100;
 }
-.navbar input{
+
+.navbar input {
     width: 60px;
     height: 60px;
     opacity: 0;
     cursor: pointer;
 }
-.navbar span{
+
+.navbar span {
     position: absolute;
     left: 35px;
     width: 40px;
@@ -109,180 +114,101 @@ body, .navbar, .navbar ul{
     border-radius: 15px;
     background-color: aliceblue;
     pointer-events: none;
-    transition: transform 0.3s ease-in-out,top 0.3s ease-in-out 0.3s;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
 }
-.navbar span:nth-child(2){
+
+.navbar span:nth-child(2) {
     top: calc(50% + 6px);
 }
-.navbar ul{
+
+.navbar ul {
     width: 0;
     overflow: hidden;
     transition: all 0.5s;
     white-space: nowrap;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     margin: 0px 15px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     font-family: paytone;
     text-decoration: none;
     font-size: 40px;
     font-weight: 700;
     color: aqua;
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     color: #FFE;
 }
-.navbar input:checked ~ ul{
+
+.navbar input:checked~ul {
     width: 350px;
 }
 
 /* this is a part of animation that chat GPT did */
-.navbar input:checked ~ span:nth-child(2){
+.navbar input:checked~span:nth-child(2) {
     top: calc(50% - 2px);
     transform: rotate(-45deg);
     background-color: antiquewhite;
-    transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 }
-.navbar input:checked ~ span:nth-child(3){
+
+.navbar input:checked~span:nth-child(3) {
     top: calc(50% - 2px);
     transform: rotate(45deg);
     background-color: antiquewhite;
-    transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
-} 
-
-
-.An{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-}
-.An img{
-    flex-grow: 1;
-    margin-right: 32px;
-}
-.An .text1{
-    flex-grow: 1;
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 }
 
-.Ag{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-}
-.Ag img{
-    flex-grow: 1;
-    margin-right: 32px;
-    margin-top: 32px;
-}
-.Ag .text1{
-    flex-grow: 1;
-}
-
-.Ex{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-}
-.Ex img{
-    flex-grow: 1;
-    margin-right: 32px;
-    margin-top: 32px;
-}
-.Ex .text1{
-    flex-grow: 1;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    background-color: white;
-}
-
-
-article {
-    width: 90vw;
-    max-width: 960px;
-    padding: 6em 0;
+/* 主内容 */
+.content {
     color: black;
     font-size: 18px;
     text-align: justify;
     letter-spacing: 0.075em;
-    text-indent: 2em;
+    /* text-indent: 2em; */
     line-height: 1.8em;
-}
-.explain{
-    font-family: "Righteous";
-}
-h2{
-    font-family: "Rubicrobe";
-}
-@media screen and (max-width: 1024px) {
-    header h1{
-        font-size: 2.5em;
-        padding: 1em 1.5em;
-    }  
+    margin-top: 60px;
 }
 
-@media screen and (max-width: 600px) {
-    header h1{
-        font-size: 1.5em;
-        padding: 1em 1em;
-    }  
+/* 每个盒子限制宽度 */
+.box {
+    /* 页面五分之二的宽度 */
+    width: calc((100vw / 5) * 2);
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+/* 盒子下的图片 */
+.box img {
+    width: 58%;
+}
+
+/* 文本 */
+.box .text1 {
+    text-indent: 2em;
+}
+
+/* 正文字体 */
+.box .text1 p {
+    font-size: 14px;
+}
+
+.explain {
+    font-family: "Righteous";
+}
+
+h2 {
+    font-family: "Rubicrobe";
 }
 
 /* animation */
-
-header span{
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-header span.active{
-    animation: smoke 2s linear forwards;
-    transform-origin: bottom;
-}
-
-.show{
-    animation: show-letter .5s linear forwards;
-}
-
-@keyframes show-letter{
-    0%{
-        opacity: 0;
-        transform: rotate(0deg) scale(1);
-    }
-    50%{
-        opacity: 0.5;
-        transform: rotate(45deg) scale(1.1);
-    }
-
-    100%{
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-    }
-}
-
-@keyframes smoke{
-    0%{
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-    }
-    100%{
-        opacity: 0;
-        filter: blur(20px);
-        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
-    }
-}
-
-/* chat gpt wirte but still not working */
 
 header span {
     position: relative;
@@ -295,8 +221,8 @@ header span.active {
     transform-origin: bottom;
 }
 
-.header span.show {
-    animation: show-letter 0.5s linear forwards;
+.show {
+    animation: show-letter .5s linear forwards;
 }
 
 @keyframes show-letter {
@@ -304,10 +230,12 @@ header span.active {
         opacity: 0;
         transform: rotate(0deg) scale(1);
     }
+
     50% {
         opacity: 0.5;
         transform: rotate(45deg) scale(1.1);
     }
+
     100% {
         opacity: 1;
         transform: rotate(0deg) scale(1);
@@ -320,9 +248,176 @@ header span.active {
         filter: blur(0);
         transform: translateX(0) translateY(0) rotate(0deg) scale(1);
     }
+
     100% {
         opacity: 0;
         filter: blur(20px);
         transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+
+@keyframes show-letter {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5em;
+        padding: 1em 1.5em;
+    }
+
+    /* navbar */
+    .navbar {
+        right: 30px;
+        top: 40px;
+        padding: 20px;
+    }
+
+    .navbar input {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        top: 50%;
+        left: 50%;
+        border-radius: 15px;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+    .navbar input:checked~ul {
+        width: 250px;
+    }
+
+    /* this is a part of animation that chat GPT did */
+    .navbar input:checked~span:nth-child(2) {
+        left: 15px;
+    }
+
+    .navbar input:checked~span:nth-child(3) {
+        left: 15px;
+    }
+
+    /* 主内容 */
+    .content {
+        color: black;
+        font-size: 18px;
+        text-align: justify;
+        letter-spacing: 0.075em;
+        /* text-indent: 2em; */
+        line-height: 1.8em;
+        margin-top: 60px;
+    }
+
+    /* 每个盒子限制宽度 */
+    .box {
+        width: calc((100vw / 5) * 4);
+    }
+
+    .box img {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* 调整头部 */
+    header {
+        margin-top: 80px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        padding: 1em 1em;
+    }
+
+    /* navbar */
+    .navbar {
+        right: 15px;
+        top: 20px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .navbar input {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar span {
+        width: 30px;
+        height: 3px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .navbar input:checked~ul {
+        width: 200px;
+    }
+
+    /* 主内容 */
+    .content {
+        text-align: justify;
+        letter-spacing: 0.01em;
+        line-height: 1.2em;
+        margin-top: 50px;
+    }
+
+    /* 每个盒子限制宽度 */
+    .box {
+        width: calc((100vw / 5) * 4.2);
+        /* 允许换行 */
+        flex-wrap: wrap;
+    }
+    /* 调整图片大小并居中 */
+    .box img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    /* 调整字体 */
+    .box .text1 {
+        text-indent: 0;
+    }
+    .box .text1 h2 {
+        /* 标题居中 */
+        text-align: center;
+        line-height: 1.8em;
+    }
+    .box .text1 p {
+        text-indent: 2em;
     }
 }
