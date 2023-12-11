@@ -134,3 +134,33 @@ body, .navbar, .navbar ul{
     color:#FFFFFF;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/* Chat GPT helps me to fix the code */
+@media screen and (max-width: 1600px) {
+    h1{
+        font-size: 98px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 80px;
+    }
+
+    .Ph {
+        flex-direction: column; /* 切换为纵向排列 */
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .Ph img {
+        width: 80%; /* 图片宽度100% */
+        margin: 0; /* 移除图片的边距 */
+        border-radius: 74px;
+    }
+
+    .Ph .text1 {
+        font-size: 20px; /* 文字字体大小调整 */
+        margin: 20px 0;
+    }
+}

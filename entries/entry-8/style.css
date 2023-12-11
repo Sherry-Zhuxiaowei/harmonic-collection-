@@ -18,7 +18,7 @@ body{
 }
 h1{
     color: #002762;
-    font-size: 148px;
+    font-size: 100px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -27,6 +27,7 @@ h1{
     font-style: normal;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 100px;
 }
@@ -205,5 +206,61 @@ body, .navbar, .navbar ul{
     82.5%,
     100% {
         transform: translateZ(-35vw) rotateY(-360deg);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    h1 {
+        font-size: 98px;
+        display: flex;
+        justify-content: center;
+        font-size: 60px; /* Adjust the font size for smaller screens */
+        margin-top: 30px; /* Adjust the top margin for smaller screens */
+        margin-bottom: 60px; /* Adjust the bottom margin for smaller screens */
+    }
+
+    .navbar {
+        right: 30px; /* Adjust the right position for smaller screens */
+        top: 30px; /* Adjust the top position for smaller screens */
+    }
+
+    .navbar input {
+        width: 40px; /* Adjust the width for the checkbox on smaller screens */
+        height: 40px; /* Adjust the height for the checkbox on smaller screens */
+    }
+
+    .navbar span {
+        left: 25px; /* Adjust the left position for the first span on smaller screens */
+        top: calc(50% - 8px); /* Adjust the top position for the first span on smaller screens */
+    }
+
+    .navbar span:nth-child(2) {
+        top: calc(50% + 4px); /* Adjust the top position for the second span on smaller screens */
+    }
+
+    .navbar ul li a {
+        font-size: 20px; /* Adjust the font size for navigation links on smaller screens */
+    }
+
+    .poster img {
+        width: 80%;
+        margin-top: 30px; /* Adjust the top margin for the poster image on smaller screens */
+        margin-bottom: 30px; /* Adjust the bottom margin for the poster image on smaller screens */
+    }
+
+    .shell {
+        width: 90vw; /* Adjust the width of the shell for smaller screens */
+        height: 60vw; /* Adjust the height of the shell for smaller screens */
+        max-width: 414px; /* Set a maximum width for the shell on smaller screens */
+        max-height: 736px; /* Set a maximum height for the shell on smaller screens */
+        margin-bottom: 100px; /* Adjust the bottom margin for the shell on smaller screens */
+        margin-top: 30px; /* Adjust the top margin for the shell on smaller screens */
+    }
+
+    .item {
+        width: 90vw; /* Adjust the width of the items for smaller screens */
+        height: 60vw; /* Adjust the height of the items for smaller screens */
+        max-width: 414px; /* Set a maximum width for the items on smaller screens */
+        max-height: 736px; /* Set a maximum height for the items on smaller screens */
     }
 }

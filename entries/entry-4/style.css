@@ -131,8 +131,31 @@ body, .navbar, .navbar ul{
     width: 80%; /* 图片宽度最大为容器宽度 */
     height: auto; /* 保持宽高比例 */
 }
-/* @media only screen and (min-width: 414px) {
-    .images-container img {
-        width: 750px;
+
+
+@media screen and (max-width: 1600px) {
+    h1 {
+        font-size: 60px; 
+        margin-top: 30px; 
+        margin-bottom: 60px; 
     }
-} */
+
+    p {
+        font-size: 30px;
+        line-height: 1.5; 
+    }
+
+    .images-container {
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+    }
+
+    .images-container img {
+        width: 100%; 
+        max-width: none; 
+        height: auto; 
+        margin: 0; 
+    }
+}

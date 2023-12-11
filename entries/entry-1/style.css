@@ -282,7 +282,7 @@ body, .navbar, .navbar ul{
 
 
 
-/* pic and text */
+/* pic and text  Chat GPT helps me to fix the code*/
 /* .Alter{
     display: flex;
     flex-direction: row;
@@ -377,4 +377,173 @@ body, .navbar, .navbar ul{
     pointer-events: none;
     transition: opacity 0.3s ease 0.5s; 
 }
+/* Chat GPT help me to fix the code */
+@media screen and (max-width: 1600px) {
+  h1{
+    font-size: 98px;
+    display: flex;
+    justify-content: center;
+  }
+  /* 图片和文字的自适应 */
+  .Alter {
+      flex-direction: column;
+      align-items: center;
+  }
 
+  .Alter .alterpic img {
+      width: 100%; /* 图片宽度100% */
+      height: auto; /* 自适应高度 */
+      margin: 0; /* 移除边距 */
+  }
+
+  .Alter .yellow img {
+      width: 100%; /* 图片宽度100% */
+      height: auto; /* 自适应高度 */
+      margin-left: 0; /* 移除左边距 */
+  }
+
+  .Alter .text1 {
+      font-size: 20px; /* 文字字体大小调整 */
+      margin-right: 0; /* 移除右边距 */
+  }
+
+  /* banner中的内容缩小 */
+  #banner {
+      top: 35%; /* 调整top值 */
+  }
+
+  #banner .img-wrapper .img-box img {
+      width: 100%; /* 图片宽度100% */
+      height: auto; /* 自适应高度 */
+  }
+
+  /* hover的东西缩小并位于class alter图片的下面 */
+  .Alter .hover {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-top: 20px; /* 调整上边距 */
+  }
+
+  .Alter .yellow {
+      width: 100%; /* 宽度100% */
+      height: auto; /* 自适应高度 */
+      margin-left: 0; /* 移除左边距 */
+  }
+  
+  .Alter .hover::before {
+      content: "";
+      width: 100%;
+      height: 20px; /* 调整上边距 */
+      display: block;
+  }
+
+  .Alter .hover .text1 {
+      font-size: 20px; /* 文字字体大小调整 */
+      margin-right: 0; /* 移除右边距 */
+  }
+
+  /* 鼠标悬停时触发效果 */
+  .text1 {
+      opacity: 1; /* 显示文字 */
+  }
+
+  .Alter:hover .yellow::after {
+      content: "";
+      display: block;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease 0.5s;
+  }
+}
+
+/* page button */
+.button-container {
+  text-align: center;
+  --pink: #ec4989;
+  --dark-pink: #a12355;
+  --light-grey: #f3f3f3;
+  --dark-grey: #cecece;
+  --button-width: 150px;
+  --button-height: 125px;
+  --heart-size: 40px;
+  --font-family: paytone;
+}
+.next{
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  padding: 20px;
+
+}
+.previous{
+  position: fixed;
+  left: 20px;
+  bottom: 0;
+  padding: 20px;
+}
+
+.button {
+  position: relative; /* Set position to relative */
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: 15px;
+  background: var(--light-grey);
+  box-shadow: var(--dark-grey) 0 15px 0 0;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in;
+  margin-top: 20px;
+  text-decoration: none; /* Remove default link underline */
+  color: black; /* Set text color */
+  font-family: var(--font-family); /* Set font family */
+  z-index: 2; /* Set z-index to place text above the heart */
+}
+
+.button:active,
+.button:hover {
+  background: var(--pink);
+  box-shadow: var(--dark-pink) 0 5px 0 0;
+  transform: translateY(10px);
+}
+
+.heart {
+  width: var(--heart-size);
+  height: var(--heart-size);
+  transform: rotate(45deg);
+  background: var(--dark-grey);
+  top: 5px;
+  position: absolute; /* Set position to absolute */
+  display: flex;
+  transition: 0.2s ease-in;
+  z-index: 1; /* Set z-index to place heart below the text */
+}
+
+.button:hover > .heart {
+  background: var(--pink);
+}
+
+.button:active > .heart {
+  background: white;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  position: absolute;
+}
+
+.heart::before {
+  left: -50%;
+}
+
+.heart::after {
+  top: -50%;
+}
