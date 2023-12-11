@@ -137,6 +137,19 @@ body, .navbar, .navbar ul{
 
 /* Chat GPT helps me to fix the code */
 @media screen and (max-width: 1600px) {
+    .navbar {
+        width: 30px; /* Set the width to 40px for smaller screens */
+        height: 30px; /* Set the height to 40px for smaller screens */
+        border-radius: 30px; /* Set the border-radius to 10px for smaller screens */
+        right: 10px; /* Adjust the position for smaller screens */
+        top: 10px; /* Adjust the position for smaller screens */
+    }
+
+    .navbar span {
+        width: 20px; /* Set the width to 20px for smaller screens */
+        top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+
     h1{
         font-size: 98px;
         display: flex;

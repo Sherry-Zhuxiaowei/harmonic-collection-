@@ -10,6 +10,9 @@
   margin: 0;
   padding: 0;
 }
+
+
+
 body{
     background-color: #8C2727;
     background-size: cover; 
@@ -107,6 +110,17 @@ body, .navbar, .navbar ul{
 
 
 /* rotate pictures display */
+.last .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
   :root {
     --post-spacing: 1.78vw;
@@ -417,6 +431,7 @@ body, .navbar, .navbar ul{
       height: auto; /* 自适应高度 */
   }
 
+
   /* hover的东西缩小并位于class alter图片的下面 */
   .Alter .hover {
       flex-direction: column;
@@ -458,29 +473,43 @@ body, .navbar, .navbar ul{
 }
 
 /* page button */
+footer {
+  margin: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.change {
+  position: relative;
+  z-index: 2;
+}
+/* chat gpt helps me to fix the code */
 .button-container {
   text-align: center;
-  --pink: #ec4989;
-  --dark-pink: #a12355;
-  --light-grey: #f3f3f3;
-  --dark-grey: #cecece;
-  --button-width: 150px;
+  --pink: #01fff2;
+  --dark-pink: #04aea6;
+  --light-grey: #FF016C;
+  --dark-grey: #950a26;
+  --button-width: 140px;
   --button-height: 125px;
-  --heart-size: 40px;
   --font-family: paytone;
 }
 .next{
-  position: fixed;
   right: 20px;
   bottom: 0;
   padding: 20px;
 
 }
 .previous{
-  position: fixed;
   left: 20px;
   bottom: 0;
-  padding: 20px;
+  padding: 40px;
+}
+.change{
+  font-size: 40px;
+  color: #fff59f;
 }
 
 .button {
@@ -510,40 +539,3 @@ body, .navbar, .navbar ul{
   transform: translateY(10px);
 }
 
-.heart {
-  width: var(--heart-size);
-  height: var(--heart-size);
-  transform: rotate(45deg);
-  background: var(--dark-grey);
-  top: 5px;
-  position: absolute; /* Set position to absolute */
-  display: flex;
-  transition: 0.2s ease-in;
-  z-index: 1; /* Set z-index to place heart below the text */
-}
-
-.button:hover > .heart {
-  background: var(--pink);
-}
-
-.button:active > .heart {
-  background: white;
-}
-
-.heart::before,
-.heart::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: inherit;
-  position: absolute;
-}
-
-.heart::before {
-  left: -50%;
-}
-
-.heart::after {
-  top: -50%;
-}

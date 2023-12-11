@@ -206,3 +206,72 @@ h2{
     }
 }
 
+/* page button */
+footer {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .change {
+    position: relative;
+    z-index: 2;
+  }
+/* chat gpt helps me to fix the code */
+  
+  .button-container {
+    text-align: center;
+    --pink: #01fff2;
+    --dark-pink: #04aea6;
+    --light-grey: #FF016C;
+    --dark-grey: #950a26;
+    --button-width: 140px;
+    --button-height: 125px;
+    --font-family: paytone;
+  }
+  .next{
+    right: 20px;
+    bottom: 0;
+    padding: 40px;
+  
+  }
+  .previous{
+    left: 20px;
+    bottom: 0;
+    padding: 40px;
+  }
+  .change{
+    font-size: 40px;
+    color: #fff59f;
+  }
+  
+  .button {
+    position: relative; /* Set position to relative */
+    width: var(--button-width);
+    height: var(--button-height);
+    border-radius: 15px;
+    background: var(--light-grey);
+    box-shadow: var(--dark-grey) 0 15px 0 0;
+    border: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in;
+    margin-top: 20px;
+    text-decoration: none; /* Remove default link underline */
+    color: black; /* Set text color */
+    font-family: var(--font-family); /* Set font family */
+    z-index: 2; /* Set z-index to place text above the heart */
+  }
+  
+  .button:active,
+  .button:hover {
+    background: var(--pink);
+    box-shadow: var(--dark-pink) 0 5px 0 0;
+    transform: translateY(10px);
+  }
+  
+  
