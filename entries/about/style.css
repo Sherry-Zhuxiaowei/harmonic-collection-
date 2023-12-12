@@ -97,7 +97,9 @@ body, .navbar, .navbar ul{
 .navbar input:checked ~ ul{
     width: 350px;
 }
-
+.navbar input:checked ~ ul{
+    width: 350px;
+}
 /* this is a part of animation that chat GPT did */
 .navbar input:checked ~ span:nth-child(2){
     top: calc(50% - 2px);
@@ -138,16 +140,24 @@ body, .navbar, .navbar ul{
 /* Chat GPT helps me to fix the code */
 @media screen and (max-width: 1600px) {
     .navbar {
-        width: 30px; /* Set the width to 40px for smaller screens */
-        height: 30px; /* Set the height to 40px for smaller screens */
-        border-radius: 30px; /* Set the border-radius to 10px for smaller screens */
+        border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
         right: 10px; /* Adjust the position for smaller screens */
         top: 10px; /* Adjust the position for smaller screens */
+    }
+    .navbar input{
+        width: 30px;
+        height: 30px;
     }
 
     .navbar span {
         width: 20px; /* Set the width to 20px for smaller screens */
         top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+    .navbar ul li a{
+        font-size: 25px;
+    }
+    .navbar span{
+        left: 25px;
     }
 
     h1{
@@ -176,4 +186,6 @@ body, .navbar, .navbar ul{
         font-size: 20px; /* 文字字体大小调整 */
         margin: 20px 0;
     }
+
 }
+

@@ -11,7 +11,7 @@
     padding: 0;
 }
 body{
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
     width: 100%;
     background-color: #ffffff;
@@ -123,8 +123,104 @@ body, .navbar, .navbar ul{
     justify-content: center;
     margin-bottom: 50px;
 }
+
+.vedio video{
+    width: 100%;
+
+}
+
+/* page button */
+footer {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+  }
+  
+  .change {
+    position: relative;
+    z-index: 2;
+  }
 /* chat gpt helps me to fix the code */
-@media screen and (max-width: 1000px) {
+  
+  .button-container {
+    text-align: center;
+    --pink: #01fff2;
+    --dark-pink: #04aea6;
+    --light-grey: #FF016C;
+    --dark-grey: #950a26;
+    --button-width: 140px;
+    --button-height: 125px;
+    --font-family: paytone;
+  }
+  .next{
+    right: 20px;
+    bottom: 0;
+    padding: 40px;
+  
+  }
+  .previous{
+    left: 20px;
+    bottom: 0;
+    padding: 40px;
+  }
+  .change{
+    font-size: 40px;
+    color: #fff59f;
+  }
+  
+  .button {
+    position: relative; /* Set position to relative */
+    width: var(--button-width);
+    height: var(--button-height);
+    border-radius: 15px;
+    background: var(--light-grey);
+    box-shadow: var(--dark-grey) 0 15px 0 0;
+    border: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in;
+    margin-top: 20px;
+    text-decoration: none; /* Remove default link underline */
+    color: black; /* Set text color */
+    font-family: var(--font-family); /* Set font family */
+    z-index: 2; /* Set z-index to place text above the heart */
+  }
+  
+  .button:active,
+  .button:hover {
+    background: var(--pink);
+    box-shadow: var(--dark-pink) 0 5px 0 0;
+    transform: translateY(10px);
+  }
+
+
+/* chat gpt helps me to fix the code */
+@media screen and (max-width: 1441px) {
+    .navbar {
+        border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
+        right: 10px; /* Adjust the position for smaller screens */
+        top: 10px; /* Adjust the position for smaller screens */
+    }
+    .navbar input{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        width: 20px; /* Set the width to 20px for smaller screens */
+        top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+    .navbar ul li a{
+        font-size: 25px;
+    }
+    .navbar span{
+        left: 25px;
+    }
     h1{
         font-size: 98px;
         display: flex;

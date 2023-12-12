@@ -3,7 +3,7 @@ body{
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #2A284C;
+    /* background-color: #2A284C; */
     flex-direction: column;
 }
 @font-face {
@@ -133,32 +133,6 @@ body, .navbar, .navbar ul{
 }
 
 
-@media screen and (max-width: 1600px) {
-    h1 {
-        font-size: 60px; 
-        margin-top: 30px; 
-        margin-bottom: 60px; 
-    }
-
-    p {
-        font-size: 30px;
-        line-height: 1.5; 
-    }
-
-    .images-container {
-        flex-direction: column; 
-        align-items: center; 
-        margin-top: 30px; 
-        margin-bottom: 30px; 
-    }
-
-    .images-container img {
-        width: 100%; 
-        max-width: none; 
-        height: auto; 
-        margin: 0; 
-    }
-}
 
 
 
@@ -228,5 +202,54 @@ footer {
     box-shadow: var(--dark-pink) 0 5px 0 0;
     transform: translateY(10px);
   }
-  
+
+
+  @media screen and (max-width: 1441px) {
+    .navbar {
+        border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
+        right: 10px; /* Adjust the position for smaller screens */
+        top: 10px; /* Adjust the position for smaller screens */
+    }
+    .navbar input{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        width: 20px; /* Set the width to 20px for smaller screens */
+        top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+    .navbar ul li a{
+        font-size: 25px;
+    }
+    .navbar span{
+        left: 25px;
+    }
+    h1 {
+        font-size: 60px; 
+        margin-top: 30px; 
+        margin-bottom: 60px; 
+    }
+
+    p {
+        font-size: 30px;
+        line-height: 1.5; 
+    }
+
+    .images-container {
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+    }
+
+    .images-container img {
+        width: 100%; 
+        max-width: none; 
+        height: auto; 
+        margin: 0; 
+    }
+}
+
+
   

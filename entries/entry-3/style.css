@@ -115,21 +115,6 @@ body, .navbar, .navbar ul{
     /* text-align: center; */
 }
 
-@media screen and (max-width: 1600px) {
-    h1{
-        font-size: 98px;
-        display: flex;
-        justify-content: center;
-    }
-    .school {
-      height: auto; 
-    }
-  
-    .school img {
-      width: 80%; 
-      height: auto; 
-    }
-  }
 
 
 /* page button */
@@ -198,5 +183,43 @@ footer {
     box-shadow: var(--dark-pink) 0 5px 0 0;
     transform: translateY(10px);
   }
+
+
+
+@media screen and (max-width: 1441px) {
+  .navbar {
+        border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
+        right: 10px; /* Adjust the position for smaller screens */
+        top: 10px; /* Adjust the position for smaller screens */
+    }
+    .navbar input{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        width: 20px; /* Set the width to 20px for smaller screens */
+        top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+    .navbar ul li a{
+        font-size: 25px;
+    }
+    .navbar span{
+        left: 25px;
+    }
+  h1{
+      font-size: 98px;
+      display: flex;
+      justify-content: center;
+  }
+  .school {
+    height: auto; 
+  }
+
+  .school img {
+    width: 80%; 
+    height: auto; 
+  }
+}
   
   

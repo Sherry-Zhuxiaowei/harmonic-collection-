@@ -21,9 +21,13 @@ html{
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
+   
+
+}
+
+body{
     flex-direction: column;
 
-    
 }
 /* navigation bar */
 body, .navbar, .navbar ul{
@@ -187,24 +191,7 @@ h2{
     text-align: center;
 }
 
-@media (max-width: 800px) {
-    .text {
-      color: #03384c;
-      font-size: 70px;
-      margin-bottom: 80px;
-    }
-    .S1,.S2,.S3,.S4{
-        width: 100%;
-    }
-    .spring{
-        width: 100%;
-    }
-    h2{
-        color: #03384c;
-        font-weight: 700;
-        text-align: center;
-    }
-}
+
 
 /* page button */
 footer {
@@ -273,5 +260,46 @@ footer {
     box-shadow: var(--dark-pink) 0 5px 0 0;
     transform: translateY(10px);
   }
+
+
+  
+  @media (max-width: 1441px) {
+    .navbar {
+        border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
+        right: 10px; /* Adjust the position for smaller screens */
+        top: 10px; /* Adjust the position for smaller screens */
+    }
+    .navbar input{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        width: 20px; /* Set the width to 20px for smaller screens */
+        top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+    .navbar ul li a{
+        font-size: 25px;
+    }
+    .navbar span{
+        left: 25px;
+    }
+    .text {
+      color: #03384c;
+      font-size: 70px;
+      margin-bottom: 80px;
+    }
+    .S1,.S2,.S3,.S4{
+        width: 100%;
+    }
+    .spring{
+        width: 100%;
+    }
+    h2{
+        color: #03384c;
+        font-weight: 700;
+        text-align: center;
+    }
+}
   
   

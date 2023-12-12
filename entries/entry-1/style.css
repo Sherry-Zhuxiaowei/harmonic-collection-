@@ -392,7 +392,27 @@ body, .navbar, .navbar ul{
     transition: opacity 0.3s ease 0.5s; 
 }
 /* Chat GPT help me to fix the code */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1441px) {
+  .navbar {
+        border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
+        right: 10px; /* Adjust the position for smaller screens */
+        top: 10px; /* Adjust the position for smaller screens */
+    }
+    .navbar input{
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar span {
+        width: 20px; /* Set the width to 20px for smaller screens */
+        top: calc(50% - 5px); /* Adjust the position for smaller screens */
+    }
+    .navbar ul li a{
+        font-size: 25px;
+    }
+    .navbar span{
+        left: 25px;
+    }
   h1{
     font-size: 98px;
     display: flex;
@@ -476,7 +496,7 @@ body, .navbar, .navbar ul{
 footer {
   margin: 50px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
 }
 
@@ -496,17 +516,17 @@ footer {
   --button-height: 125px;
   --font-family: paytone;
 }
-.next{
+.nex{
   right: 20px;
   bottom: 0;
   padding: 20px;
 
 }
-.previous{
+/* .previous{
   left: 20px;
   bottom: 0;
-  padding: 40px;
-}
+  padding: 20px;
+} */
 .change{
   font-size: 40px;
   color: #fff59f;
