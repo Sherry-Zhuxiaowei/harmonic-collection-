@@ -493,6 +493,10 @@ body, .navbar, .navbar ul{
       pointer-events: none;
       transition: opacity 0.3s ease 0.5s;
   }
+  :root {
+    --post-size: 15vw;
+    /* --mask-size: 100vw; */
+  }
   
 }
 
