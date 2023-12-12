@@ -391,8 +391,53 @@ body, .navbar, .navbar ul{
     pointer-events: none;
     transition: opacity 0.3s ease 0.5s; 
 }
+
+@media screen and (max-width: 1700px) {
+
+  .Alter .alterpic img {
+      width: 60vh; 
+      height: auto; /* 自适应高度 */
+      margin: 0; /* 移除边距 */
+  }
+  .Alter .yellow img {
+    width: 80%; 
+    height: auto; /* 自适应高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+  .Alter .text1 {
+      font-size: 20px; 
+      
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .Alter .alterpic img {
+      width: 50vh; 
+      height: auto; /* 自适应高度 */
+      margin: 0; /* 移除边距 */
+  }
+  .Alter .yellow img {
+    width: 80%; 
+    height: auto; /* 自适应高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+  .Alter .text1 {
+      font-size: 20px; 
+      
+  }
+}
 /* Chat GPT help me to fix the code */
-@media screen and (max-width: 1441px) {
+
+@media screen and (max-width: 734px) {
   .navbar {
         border-radius: 99px; /* Set the border-radius to 10px for smaller screens */
         right: 10px; /* Adjust the position for smaller screens */
