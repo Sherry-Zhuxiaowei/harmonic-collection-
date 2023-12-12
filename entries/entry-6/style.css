@@ -111,7 +111,6 @@ body, .navbar, .navbar ul{
 
 .content h2{
     color:#164A3E;
-    font-size: 128px;
     margin-left: 400px;
     margin: 0;
     padding: 0;
@@ -137,11 +136,7 @@ body, .navbar, .navbar ul{
 
 
 
-/* @media (min-width:850px) {
-  .header h1 {
-    font-size: 120px;
-  }
-} */
+
 
 .S1{
     height: 500px;
@@ -186,7 +181,7 @@ body, .navbar, .navbar ul{
 
 h2{
     font-family: "bely-display", sans-serif;
-    font-weight: 400;
+    font-size: 148px;
     font-style: normal;
     text-align: center;
 }
@@ -286,19 +281,19 @@ footer {
     }
     .text {
       color: #03384c;
-      font-size: 70px;
+      font-size: 40px;
       margin-bottom: 80px;
     }
     .S1,.S2,.S3,.S4{
-        width: 100%;
-    }
-    .spring{
-        width: 100%;
+        width: 50%;
     }
     h2{
         color: #03384c;
-        font-weight: 700;
-        text-align: center;
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 }
   

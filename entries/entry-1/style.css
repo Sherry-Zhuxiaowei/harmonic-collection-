@@ -368,7 +368,7 @@ body, .navbar, .navbar ul{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 6;
 }
 .Alter .text1 {
     flex-grow: 1;
@@ -431,9 +431,12 @@ body, .navbar, .navbar ul{
   }
 
   .Alter .yellow img {
-      width: 100%; /* 图片宽度100% */
+      width: 50%; /* 图片宽度100% */
       height: auto; /* 自适应高度 */
-      margin-left: 0; /* 移除左边距 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
   }
 
   .Alter .text1 {
@@ -490,6 +493,7 @@ body, .navbar, .navbar ul{
       pointer-events: none;
       transition: opacity 0.3s ease 0.5s;
   }
+  
 }
 
 /* page button */
@@ -498,6 +502,7 @@ footer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  z-index: 9;
 }
 
 
