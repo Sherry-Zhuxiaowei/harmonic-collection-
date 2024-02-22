@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYDIVING</title>
+    <link rel="stylesheet" href="https://use.typekit.net/laf6orl.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            cursor: url("plane.PNG"), auto;
+            background: radial-gradient(circle,#ffe066,#ffbfbf,#a1fdff);
+            overflow: hidden;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            font-family: "bubblegum-pop-highlight", sans-serif;
+            font-weight: 400;
+            font-style: normal; 
+            color: rgb(17, 199, 172);
+            width: 2074px;
+            text-align: center;
+            font-size: 60px;
+            border-right: 2px solid #eee;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: grow 4s steps(44) normal both,
+            blink 500ms steps(44) infinite normal;
+        }
+        .button{
+            font-family: "bubblegum-pop-highlight", sans-serif;
+            font-weight: 400;
+            font-style: normal; 
+            color: rgb(17, 199, 172);
+            font-size: 50px;
+            background-color: #bbfff3;
+      padding: 10px 20px;
+      border: 2px solid #FFFAD1;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 85px;
+    }
+    .button:hover {
+      background-color: #ffe1e1;
+    }
+
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+            to {
+                width: 2074px;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-right-color: #eee;
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p>
+            Standing at the helicopter door, 
+            <br>courage and hesitation intertwining in my heart. 
+            <br>
+            Take the leap?
+            <br> 
+            <a href="index.html" class="button">Yes</a>  or  <a href="index.html" class="button">No</a>
+    
+        </p>
+    </div>
+</body>
+</html>
+
+
