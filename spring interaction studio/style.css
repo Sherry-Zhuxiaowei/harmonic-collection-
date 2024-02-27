@@ -8,7 +8,7 @@ body{
     background-image:url("backgroundimg.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
-    height: 8000px;
+    height: 9100px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -212,8 +212,28 @@ img {
     font-size: 50px;
     margin-bottom: 50px;
     margin-top: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    animation: grow 5s steps(44) normal both,
+      blink 500ms steps(44) infinite normal;
 }
-
+@keyframes grow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-right-color: #eee;
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
 
 
 .fa-regular.fa-star {
@@ -254,7 +274,12 @@ img {
     align-items: center;
     flex-direction:column;
     margin: 0 auto;
-    gap: 100px;
+    gap: 150px;
 }
 
+.image-container {
+    width: 75%; /* 修改图片宽度 */
+    height: auto; /* 高度自适应 */
+    /* 添加其他样式 */
+}
  
